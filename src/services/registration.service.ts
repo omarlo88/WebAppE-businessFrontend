@@ -12,6 +12,8 @@ export class RegistrationService {
   constructor(private http: HttpClient) { }
 
   register(data: FormData){
-    return this.http.post(this.host + "/AuthenticationRestController/register", data, {observe: "response"});
+    return this.http.post(this.host + "/AuthenticationRestController/register", data);
+    //return this.http.post(this.host + "/AuthenticationRestController/registerServeurFile", data);
   }
+  
 }
